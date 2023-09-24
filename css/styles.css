@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --padding-container: 100px 0;
+  --color-blue: #034ea2;
+  --color-yellow: #FFDD00;
+  --color-red: #ED1C24;
+  --color-brown: #452C25;
+  --color-opaque-yellow: #B87510;
+  --color-green: #086F35;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-container);
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 800px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),
+    url(../images/hero-ecuador.jpg); /* Capa de transparencia */
+  background-size: cover; /* Adaptar al tamaño de la imagen */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 93%, 34% 100%, 0 84%);
+  z-index: -1;
+}
+
+/* NAV */
+
+.nav {
+  --padding-container: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__title {
+  font-weight: 300;
+}
+
+.nav__link {
+  margin-left: auto;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 2em;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__links {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__img {
+  display: block;
+  width: 50px;
+}
+
+.nav__menu {
+  margin-left: auto;
+  cursor: pointer;
+  display: none;
+}
+
+.nav__close {
+  display: var(--show, none);
+}
+
+.main {
+  height: 500px;
+}
+
+/* HERO CONTAINER */
+
+.hero__container {
+  max-width: 800px;
+  --padding-container: 0;
+  display: grid;
+  grid-auto-rows: max-content;
+  align-content: center;
+  gap: 1em;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.hero__title{
+  font-size: 3rem;
+}
+
+.hero__paragraph{
+  margin-bottom: 20px;
+}
+
+.hero__link{
+  display: inline-block;
+  background-color: var(--color-blue);
+  justify-self: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 30px;
+  border-radius: 30px;
+}
