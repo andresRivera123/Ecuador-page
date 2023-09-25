@@ -3,11 +3,11 @@
 :root {
   --padding-container: 100px 0;
   --color-blue: #034ea2;
-  --color-yellow: #FFDD00;
-  --color-red: #ED1C24;
-  --color-brown: #452C25;
-  --color-opaque-yellow: #B87510;
-  --color-green: #086F35;
+  --color-yellow: #ffdd00;
+  --color-red: #ed1c24;
+  --color-brown: #452c25;
+  --color-opaque-yellow: #b87510;
+  --color-green: #086f35;
 }
 
 body {
@@ -110,20 +110,90 @@ body {
   text-align: center;
 }
 
-.hero__title{
+.hero__title {
   font-size: 3rem;
 }
 
-.hero__paragraph{
+.hero__paragraph {
   margin-bottom: 20px;
 }
 
-.hero__link{
+.cta {
   display: inline-block;
-  background-color: var(--color-blue);
+  background-color: var(--color-opaque-yellow);
   justify-self: center;
   color: #fff;
   text-decoration: none;
-  padding: 13px 30px;
+  padding: 13px 40px;
   border-radius: 30px;
+}
+
+/* ABOUT */
+
+.about {
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--color-blue);
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.about__paragraph {
+  line-height: 1.7;
+}
+
+.about__main {
+  padding-top: 80px;
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1em;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.about__icons {
+  display: grid;
+  gap: 1em;
+  justify-items: center;
+  width: 260px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.about__icon {
+  width: 125px;
+}
+
+/* Knowledge */
+
+.knowledge {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.65px, #e5e5f7 0.65px);
+  background-size: 13px 13px;
+  overflow: hidden;
+}
+
+.knowledge__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  align-items: center;
+}
+
+.knowledge__picture{
+  max-width: 600px;
+}
+
+.knowledge__img{
+  width: 100%;
+  display: block;
+}
+
+.knowledge__paragraph{
+  line-height: 1.7;
+  margin-bottom: 15px;
 }
